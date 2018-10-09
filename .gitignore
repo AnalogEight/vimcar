@@ -24,7 +24,6 @@ node_modules
 
 # Project temp files/folders
 dist
-.userconfig.json
 
 # Caching files
 \.smbdelete*

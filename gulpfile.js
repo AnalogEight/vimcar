@@ -108,7 +108,7 @@ gulp.task('deploy:images', ['deploy:clean'], function() {
  * Design task: `gulp design`
  */
 
-gulp.task('design', ['design:fonts', 'design:styles', 'design:images', 'design:scripts', 'dev:orig'], function() {
+gulp.task('design', ['design:fonts', 'design:styles', 'design:images', 'design:scripts', 'design:html'], function() {
 
   // File watchers
   gulp.watch('src/sass/**/*.scss', {
@@ -202,11 +202,11 @@ gulp.task('design:scripts', function() {
 });
 
 gulp.task('design:html', function() {
-  return gulp.src('src/orig/*.HTM')
-    .pipe(newer('dist/html'))
-    .pipe(gulp.dest('./dist/html'))
+  return gulp.src('src/html/*.HTM')
+    .pipe(newer('dist/'))
+    .pipe(gulp.dest('./dist/'))
     .pipe(notify({
-      message: 'Orig done!',
+      message: 'HTML done!',
       onLast: true
     }));
 });
