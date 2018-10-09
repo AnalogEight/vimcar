@@ -123,6 +123,9 @@ gulp.task('design', ['design:fonts', 'design:styles', 'design:images', 'design:s
   gulp.watch('src/images/**/*.{svg,jpg,gif,ico,png}', {
     interval: 1000
   }, ['design:images']);
+  gulp.watch('src/html/**.html', {
+    interval: 1000
+  }, ['design:html']);
 });
 
 gulp.task('design:styles', function() {
@@ -202,7 +205,7 @@ gulp.task('design:scripts', function() {
 });
 
 gulp.task('design:html', function() {
-  return gulp.src('src/html/*.HTM')
+  return gulp.src('src/html/*.html')
     .pipe(newer('dist/'))
     .pipe(gulp.dest('./dist/'))
     .pipe(notify({
