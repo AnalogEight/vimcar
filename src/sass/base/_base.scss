@@ -1,0 +1,133 @@
+// Set min-width of body to 320px
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  color: $color-grey-700;
+}
+
+body,
+html,
+td,
+tr {
+  @include proximaNovaRegular();
+}
+
+a {
+  @include fontSize(15px);
+  text-decoration: none;
+  color: $color-blue-dark;
+  border-bottom: 1px solid $color-blue-link-border;
+  @include proximaNovaLight();
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    // color: darken($color-blue-dark, 20%);
+  }
+}
+
+.h2-title,
+.h3-title,
+h1,
+h2,
+h3 {
+  @include albertLight();
+}
+
+.h2-title,
+.h3-title,
+.h4-title,
+h1,
+h2,
+h3,
+h4 {
+  color: $color-grey-700;
+}
+
+h1 {
+  @include fontSize(28px);
+  margin-bottom: 30px;
+}
+
+.h2-title,
+h2 {
+  @include fontSize(22px);
+}
+
+.h3-title,
+h3 {
+  @include fontSize(18px);
+  margin-bottom: 20px;
+}
+
+.h4-title,
+h4 {
+  @include fontSize(16px);
+  @include proximaNovaRegular();
+  margin-bottom: 25px;
+}
+@include sm-and-below {
+  h1 {
+    @include fontSize(20px);
+    margin-bottom: 10px;
+  }
+
+  .h3-title,
+  h3 {
+    @include fontSize(20px);
+    margin-bottom: 10px;
+  }
+}
+
+li,
+p {
+  @include proximaNovaLight();
+  @include fontSize(15px);
+  @include lineHeight(20px);
+  color: $color-grey-700;
+  float: none;
+
+  &.h2-title {
+    @include lineHeight(28px);
+  }
+
+  &.h3-title {
+    @include lineHeight(26px);
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.bold,
+strong {
+  font-weight: 500;
+}
+
+ol,
+ul {
+  margin: 18px 0 18px 18px;
+}
+
+td,
+tr {
+  font-weight: 300;
+}
+@include sm-and-below {
+  body {
+    @include fontSize(14px);
+  }
+
+  p {
+    @include fontSize(14px);
+  }
+}

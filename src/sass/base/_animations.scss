@@ -1,0 +1,97 @@
+/**
+* @desc - Fade in animation
+*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/**
+* @desc - Animations for the slide in of the mobile navigation
+* @elements - .slideIn
+* @link - false
+*/
+.slideIn {
+  -webkit-animation: slideIn 0.3s;
+  -moz-animation: slideIn 0.3s;
+  -o-animation: slideIn 0.3s;
+  animation: slideIn 0.3s;
+}
+@-webkit-keyframes slideIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@-o-keyframes slideIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@-moz-keyframes slideIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+/**
+* @desc - Animations for the slide out of the mobile navigation
+* @elements - .slideOut
+* @link - false
+*/
+.slideOut {
+  -webkit-animation: slideOut 0.3s;
+  -moz-animation: slideOut 0.3s;
+  -o-animation: slideOut 0.3s;
+  animation: slideOut 0.3s;
+}
+@-webkit-keyframes slideOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@-o-keyframes slideOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@-moz-keyframes slideOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes slideOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}

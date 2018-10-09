@@ -1,0 +1,52 @@
+/**
+  * @desc - Variables for z-indexes
+  * @elements - false
+  * @link - false
+*/
+$z-layers: (
+  //Screen debugger (xs, sm, md, lg)
+  "screen-debug": 5000,
+  "alert": 4600,
+  "searchflap": ("input": 4000, "content": 4001, "navbutton": 4002, "closebutton":4003),
+  "tooltip": ("dropdownsuggest": 3200),
+  "modal": ("bottomnav":10,"topnav":10,"overlay": 3000, "close": 3001, "back": 3001),
+  "stickyUntil": 2999,
+  "header": ("sticky": 2500, "sticky-searchbar": 1010, "navigation-level2": 1006, "navigation": 3000),
+  "checkout": ("pup-map":90, "pup-list":88),
+  "productlist": ("mobile-bottom-nav": 60),
+  "product": ("buttons": 50,"sticker": 7),
+  "tvi": ("sticky-object": 20),
+  "checkout-header": ("steps":10),
+  "address": ("title": 9, "triangle": 8),
+  "labels": 7,
+  "search-shop": 2,
+  "checkout-date": ("date-circle":1),
+  "form-field": ("password-toggle": 2, "base": 1, "nice-select": auto, "uploader": -1),
+  "button": ("after": -1)
+);
+/**
+  * @desc - Function to get the corresponding z-index of a layer
+  * @elements - false
+  * @link - false
+*/
+@function map-has-nested-keys($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+  @return true;
+}
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+@function z($layers...) {
+  @if not map-has-nested-keys($z-layers, $layers...) {
+    @warn "No layer found for `#{inspect($layers...)}` in $z-layers map. Property omitted.";
+  }
+  @return map-deep-get($z-layers, $layers...);
+}

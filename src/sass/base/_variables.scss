@@ -1,0 +1,76 @@
+// Fonts
+$font-size-base: 16px;
+$font-albert: 'Albert';
+$font-proxima-nova: 'proxima_nova'; //Colors
+// Base Colors
+$color-red-light: #ea2f39 !default;
+$color-red: #e62828 !default;
+$color-red-grad: #e91c51 !default;
+$color-fuschia: #e91c51 !default;
+$color-pink: #e22a4f !default;
+$color-pink-grad: #ea2f2b !default; //Pink for gradient
+$color-orange-light: #fa6e1c !default;
+$color-orange-dark: #fa4816 !default;
+$color-yellow: #fad719 !default;
+$color-green-ultralight: #fafff4 !default;
+$color-green-light: #83d719 !default;
+$color-green-normal: #6abc01 !default;
+$color-green-medium: #33cc33 !default;
+$color-green-dark: #45a579 !default;
+$color-green-flashy: #51e350 !default;
+$color-green-available: #01bf00 !default;
+$color-grey-50: #f6f6f6 !default;
+$color-grey-100: #e8e8e8 !default;
+$color-grey-200: #dddddd !default;
+$color-grey-300: #a4a4a4 !default;
+$color-grey-400: #777776 !default;
+$color-grey-500: #4a4a49 !default;
+$color-grey-600: #231f20 !default;
+$color-grey-700: #333333 !default;
+$color-white: #ffffff !default;
+$color-blue-extralight: #eff7fb !default;
+$color-blue-light: #edf2f7 !default;
+$color-blue-muted: #5686b3 !default;
+$color-blue-normal: #2f90c6 !default;
+$color-blue-medium: #1990c6 !default;
+$color-blue-dark: #004b91 !default;
+$color-blue-link-border: rgba(0, 74, 143, 0.33) !default;
+$color-disabled: #bbbbbb !default;
+$color-blue-border: #d0e9fe !default;
+$color-light-border: #eaeaea !default;
+$color-btn-default: $color-grey-500;
+$color-btn-default-hover: darken($color-grey-500, 10%);
+$color-btn-secondary: $color-green-medium;
+$color-btn-secondary-hover: darken($color-green-medium, 10%);
+$color-btn-primary: $color-pink;
+$color-btn-primary-hover: darken($color-red, 10%);
+$color-btn-disabled: $color-disabled; // Color Variations
+$color-red-50: lighten($color-red, 25%) !default;
+$color-red-100: lighten($color-red, 20%) !default;
+$color-red-200: lighten($color-red, 15%) !default;
+$color-red-300: lighten($color-red, 10%) !default;
+$color-red-400: lighten($color-red, 5%) !default;
+$color-red-500: $color-red !default;
+$color-red-600: darken($color-red, 5%) !default;
+$color-red-700: darken($color-red, 10%) !default;
+$color-red-800: darken($color-red, 15%) !default;
+$color-red-900: darken($color-red, 20%) !default;
+$color-red-950: darken($color-red, 25%) !default;
+$color-brown-dark: #312b04 !default; //Screen sizes:
+$xsmall-max-breakpoint: 767px;
+$small-min-breakpoint: 768px;
+$small-max-breakpoint: 991px;
+$medium-min-breakpoint: 992px;
+$medium-max-breakpoint: 1265px;
+$large-min-breakpoint: 1266px;
+$color-score-0: #bf0000;
+$color-score-1: #ed0000;
+$color-score-2: #ff4b0c;
+$color-score-3: #ff5a00;
+$color-score-4: #ff790c;
+$color-score-5: #ff900c;
+$color-score-6: #ffb628;
+$color-score-7: #ffd200;
+$color-score-8: #fae000;
+$color-score-9: #55e453;
+$color-score-10: #3dce3d;

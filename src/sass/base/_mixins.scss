@@ -1,0 +1,111 @@
+// Mixins for thhe fonts
+@mixin albert() {
+  font-family: $font-albert;
+  font-weight: 300;
+}
+@mixin albertThin() {
+  font-family: $font-albert;
+  font-weight: 100;
+}
+@mixin albertLight() {
+  font-family: $font-albert;
+  font-weight: 200;
+}
+@mixin albertRegular() {
+  font-family: $font-albert;
+  font-weight: 300;
+}
+@mixin albertBold() {
+  font-family: $font-albert;
+  font-weight: 400;
+}
+@mixin proxima() {
+  font-family: $font-proxima-nova;
+  font-weight: 300;
+}
+@mixin proximaNovaLight() {
+  font-family: $font-proxima-nova;
+  font-weight: 100;
+}
+@mixin proximaNovaRegular() {
+  font-family: $font-proxima-nova;
+  font-weight: 300;
+}
+@mixin proximaNovaMedium() {
+  font-family: $font-proxima-nova;
+  font-weight: 400;
+}
+@mixin proximaNovaBold() {
+  font-family: $font-proxima-nova;
+  font-weight: 600;
+}
+@mixin iconFont() {
+  // FOR USE WITHOUT CLASSES
+  font-family: 'icomoon' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// Mixin to create a linear gradient
+@mixin linearGradient($color1, $color2, $direction:to bottom) {
+  background: $color1;
+  background: -webkit-linear-gradient($direction, $color1, $color2);
+  background: -o-linear-gradient($direction, $color1, $color2);
+  background: -moz-linear-gradient($direction, $color1, $color2);
+  background: linear-gradient($direction, $color1, $color2);
+}
+// Mixin for creating animation transitions
+@mixin transition($property, $time, $transition-timing) {
+  -webkit-transition: $property $time $transition-timing;
+  -moz-transition: $property $time $transition-timing;
+  -o-transition: $property $time $transition-timing;
+  transition: $property $time $transition-timing;
+}
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+@mixin textStroke($fillColor, $strokeWidth, $strokeColor) {
+  -webkit-text-fill-color: $fillColor;
+  -webkit-text-stroke-width: $strokeWidth;
+  -webkit-text-stroke-color: $strokeColor;
+}
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculate-rem($size);
+}
+@mixin lineHeight($size) {
+  line-height: $size;
+  line-height: calculate-rem($size);
+}
+@mixin textlink() {
+  @include fontSize(15px);
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  color: $color-blue-dark;
+  border-bottom: 1px solid $color-blue-link-border;
+  @include proximaNovaLight();
+  &:hover {
+    text-decoration: none;
+  }
+  i {
+    position: absolute;
+    top: 1px;
+    display: inline-block;
+    padding: 0 0 0 5px;
+    &.front {
+      padding: 0 5px 0 13px;
+    }
+    &:after {
+      color: $color-blue-dark;
+    }
+  }
+}
