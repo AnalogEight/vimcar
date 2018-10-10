@@ -1,7 +1,7 @@
 TODO:
 - layout header
 - layout products
-- create 'add to basket' component which updates number
+X create 'add to basket' component which updates number
 - expand basket component to check for availibility
 
 EXTRA:
@@ -9,15 +9,13 @@ EXTRA:
 - animate product hover
 - generate list of products from JSON file (REST-API wise) instead of hard-coded (backend render)
 
-
-
 JS COMPONENTS:
 basket
- - Update number to represent items in basket
+ X Update number to represent items in basket
  - check if item is available 
+ X add to basket functionality
 
 product
- - add to basket functionality
  - generate list of products from JSON file
 
 CSS COMPONENTS
