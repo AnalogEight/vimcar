@@ -2,6 +2,7 @@
   "app":
   {
     "scripts": [
+      "src/api/mock.js",
       "src/scripts/modules/cart.js",
       "src/scripts/pages/app.js"
     ]

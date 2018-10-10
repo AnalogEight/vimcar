@@ -4,6 +4,7 @@
  * @author Kaj Dillen
  * @required none
  */
+// console.log(fetch2);
 var Cart = (function(my) {
   let totalItems = 0; //total amount of items in Cart
 
@@ -23,7 +24,7 @@ var Cart = (function(my) {
       message: 'Item added to cart!',
       status: 'success',
       pos: 'top-center',
-      timeout: 30000
+      timeout: 1000
     });
   };
 
@@ -37,11 +38,33 @@ var Cart = (function(my) {
   }
 
   function _isItemAvailable() {
-    const available = true;
-
-    if (available) {
-      my.addItemToCart();
-    }
+    fetch("https://example.com/-/v1/stock/reserve", { 'method': 'POST' })
+      .then(function(response) {
+        console.log(response.status);
+        const status = response.status;
+        switch (status) {
+          case 204:
+            my.addItemToCart();
+            break;
+          case 418:
+            console.log("Failed to reserve item. Out of stock");
+            UIkit.notification({
+              message: 'Item out of stock',
+              status: 'danger',
+              pos: 'top-center',
+              timeout: 1000
+            });
+            break;
+          case 500:
+            UIkit.notification({
+              message: 'Something went wrong. Please try again later.',
+              status: 'warning',
+              pos: 'top-center',
+              timeout: 1000
+            });
+            break;
+        }
+      });
   }
 
   return my;

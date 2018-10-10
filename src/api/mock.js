@@ -11,9 +11,9 @@ const fetch = (
 ) => {
   const requestKey = `${options.method || 'GET'}:${url}`
   const response = responses[requestKey]
-  return response
-    ? response(options)
-    : Promise.resolve({
+  return response ?
+    response(options) :
+    Promise.resolve({
       status: 404,
       ok: false,
       json: () => ({ code: 'not-found' }),
@@ -51,4 +51,4 @@ const responses = {
   }
 }
 
-module.exports = fetch
+// module.exports = fetch
