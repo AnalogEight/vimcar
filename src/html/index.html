@@ -12,45 +12,14 @@
 <body>
   <header class="header">
     <img src="assets/images/vimcar-logo.svg" alt="Vimcar">
-    <div class="basket-container">
-    </div>
     <div class="cart-container">
       <img src="assets/images/cart.svg" alt="Shopping Cart">
       <span class="js-cart-counter cart-counter">0</span>
     </div>
   </header>
   <div class="container productlist-container">
-    <div class="row">
-      <div class="col-xs-6 col-xs-6 col-md-3 product-tile">
-        <div class="card">
-          <img class="image" srcset="assets/images/h38ss-dtbl-sel-201603@2x.png 2x" src="assets/images/h38ss-dtbl-sel-201603.png" alt="h38ss"></img>
-          <div class="card--hover">
-            <button class="js-add-to-cart btn-add">Add to Cart</button>
-          </div>
-        </div>
-        <h2 class="title">42mm Space Gray Aluminium Case with Black Woven Nylon</h2>
-      </div>
-      <div class="col-xs-6 col-md-3 product-tile">
-        <div class="card">
-          <img class="image" srcset="assets/images/h38ss-dtgr-sel-201603@2x.png 2x" src="assets/images/h38ss-dtgr-sel-201603.png" alt="h38ss"></img>
-        </div>
-        <h2 class="title">This contains the product title</h2>
-        <button class="js-add-to-basket uk-button uk-button-small">Voeg toe</button>
-      </div>
-      <div class="col-xs-6 col-md-3 product-tile">
-        <div class="card">
-          <img class="image" srcset="assets/images/h38ss-dtrd-sel-201603@2x.png 2x" src="assets/images/h38ss-dtrd-sel-201603.png" alt="h38ss"></img>
-        </div>
-        <h2 class="title">This contains the product title</h2>
-        <button class="js-add-to-basket uk-button uk-button-small">Voeg toe</button>
-      </div>
-      <div class="col-xs-6 col-md-3 product-tile">
-        <div class="card">
-          <img class="image" srcset="assets/images/h42ss-stbk-sel-201603@2x.png 2x" src="assets/images/h42ss-stbk-sel-201603.png" alt="h38ss"></img>
-        </div>
-        <h2 class="title">This contains the product title</h2>
-        <button class="js-add-to-basket uk-button uk-button-small">Voeg toe</button>
-      </div>
+    <div class="row js-productlist">
+      <!-- Dynamicly load the products from app.js -->
     </div>
   </div>
   <script src="assets/scripts/uikit.min.js"></script>

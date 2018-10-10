@@ -1,1 +1,2 @@
+Productlist.init();
 Cart.init();
