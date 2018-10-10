@@ -1,3 +1,3 @@
 // $(function() {
-Basket.init();
+Cart.init();
 // });

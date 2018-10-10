@@ -1,0 +1,25 @@
+/**
+  * @desc - Styling for basket component
+  * @elements - .basket-container, .basket
+  * @link - false
+*/
+
+.cart-container {
+  position: absolute;
+  right: 50px;
+  top: 40px;
+}
+
+.cart-counter {
+  position: absolute;
+  left: 16px;
+  bottom: 15px;
+  color: white;
+  border-left: 8px solid $color-black;
+  border-right: 8px solid $color-black;
+  border-top: 2px solid $color-black;
+  border-bottom: 2px solid $color-black;
+  border-radius: 50px;
+  background-color: $color-black;
+  @include fontSize(10px);
+}

@@ -1,3 +1,6 @@
 .uk-notification-message-success {
-  // background-color: #000;
+  background: rgba($color-green, 1);
+  border-radius: 10px;
+  color: $color-white;
+  box-shadow: 10px 10px 112px 0px rgba(199, 204, 222, .5);
 }

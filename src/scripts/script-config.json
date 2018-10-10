@@ -1,7 +1,8 @@
 {
-  "app": {
+  "app":
+  {
     "scripts": [
-      "src/scripts/modules/basket.js",
+      "src/scripts/modules/cart.js",
       "src/scripts/pages/app.js"
     ]
   }
