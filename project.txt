@@ -5,6 +5,7 @@ TODO:
 - expand basket component to check for availibility
 
 EXTRA:
+- add Alert component (css and js)
 - animate product hover
 - generate list of products from JSON file (REST-API wise) instead of hard-coded (backend render)
 
@@ -22,4 +23,4 @@ product
 CSS COMPONENTS
  - header
  - product 
- - animations
+ - animations (extra: Add basket number animations)

@@ -1,9 +1,8 @@
 {
   "app": {
     "scripts": [
-      "src/scripts/vendor/uikit.min.js",
       "src/scripts/modules/basket.js",
-      "src/scripts/pages/base.js"
+      "src/scripts/pages/app.js"
     ]
   }
 }
