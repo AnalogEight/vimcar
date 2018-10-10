@@ -1,0 +1,12 @@
+.product-tile {
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  .title {}
+  .card {
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px #ccc;
+    background-color: $color-white;
+  }
+}
