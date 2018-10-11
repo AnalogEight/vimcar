@@ -15,9 +15,6 @@
 * @link - false
 */
 .slideIn {
-  -webkit-animation: slideIn 0.3s;
-  -moz-animation: slideIn 0.3s;
-  -o-animation: slideIn 0.3s;
   animation: slideIn 0.3s;
 }
 @-webkit-keyframes slideIn {
@@ -58,9 +55,6 @@
 * @link - false
 */
 .slideOut {
-  -webkit-animation: slideOut 0.3s;
-  -moz-animation: slideOut 0.3s;
-  -o-animation: slideOut 0.3s;
   animation: slideOut 0.3s;
 }
 @-webkit-keyframes slideOut {

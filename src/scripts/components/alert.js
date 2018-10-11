@@ -12,17 +12,13 @@ var Alert = (function(my) {
   my.init = function() {};
 
   /**
-   * @param  new - this will create a new alert
-   */
-
-  /**
    * @desc public function to create a new alert
    * @param {position,sticky,type,message} which are all the setting for the alert
    * @return none
    */
   my.new = function(position, sticky, type, message) {
-    ++uid; //increase the id by 1
-    alert = document.createElement('div'); //set up the alert html
+    ++uid;
+    const alert = document.createElement('div');
     alert.className = 'alert--' + type + ' drop-shadow'; //add correct classes
     alert.setAttribute('data-uid', uid); //set id on element to use later
     alert.innerHTML = `<i class="icon-alert-${type}"></i>

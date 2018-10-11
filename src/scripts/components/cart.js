@@ -63,13 +63,13 @@ var Cart = (function(my) {
    * @return none
    */
   function _addItemToCart() {
-    totalItems++; //increase total items by 1
+    totalItems++;
 
     const counters = document.getElementsByClassName('js-cart-counter'); //loop trough all counters to update the number
     Array.prototype.forEach.call(counters, function(counter, i) {
       counter.innerText = totalItems;
     });
-  };
+  }
 
   return my;
 
