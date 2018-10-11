@@ -18,6 +18,7 @@ var newer = require('gulp-newer');
 var notify = require("gulp-notify");
 var del = require('del');
 var babel = require('gulp-babel');
+var htmlmin = require('gulp-htmlmin');
 console.timeEnd('loading plugins');
 
 nodeModuleCache.saveStartupList();
@@ -39,17 +40,14 @@ gulp.task('default', ['deploy']);
 gulp.task('help', help);
 
 /*
- * Clean task: `gulp help`
- */
-gulp.task('deploy:clean', function() {
-  return del(['dist/**']);
-});
-
-/*
  * Deployment task: `gulp deploy`
  */
 
-gulp.task('deploy', ['deploy:clean', 'deploy:styles', 'deploy:scripts', 'deploy:images', 'deploy:fonts']);
+gulp.task('deploy', ['deploy:clean', 'deploy:styles', 'deploy:scripts', 'deploy:html', 'deploy:images', 'deploy:fonts']);
+
+gulp.task('deploy:clean', function() {
+  return del(['dist/**']);
+});
 
 gulp.task('deploy:styles', ['deploy:clean'], function() {
   var sassOps = {
@@ -91,19 +89,24 @@ gulp.task('deploy:scripts', ['deploy:clean'], function() {
 });
 
 gulp.task('deploy:fonts', ['deploy:clean'], function() {
-
   return gulp.src('src/fonts/**/*.{eot,woff,woff2,ttf}')
     // Write to our dist folder
     .pipe(gulp.dest('dist/assets/fonts'))
 });
 
 gulp.task('deploy:images', ['deploy:clean'], function() {
-
   return gulp.src('src/images/**/*.{png,svg,jpg,gif,ico}')
     // Write to our dist folder
     .pipe(gulp.dest('dist/assets/images'))
 });
 
+gulp.task('deploy:html', function() {
+  return gulp.src('src/html/*.html')
+    // .pipe(htmlmin({
+    //   collapseWhitespace: true
+    // }))
+    .pipe(gulp.dest('./dist/'))
+});
 /*
  * Design task: `gulp design`
  */

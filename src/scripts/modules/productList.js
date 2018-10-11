@@ -15,7 +15,7 @@ var Productlist = (function(my) {
     const producthtml =
       `<div class="col-xs-6 col-xs-6 col-md-3 product-tile">
         <div class="card">
-          <img class="image" srcset="assets/images/${product.Image}@2x.png 2x" src="assets/images/${product.Image}.png" alt="${product.Name}"></img>
+          <img class="image" srcset="assets/images/products/${product.Image}@2x.png 2x" src="assets/images/products/${product.Image}.png" alt="${product.Name}"></img>
           <div class="card--hover">
             <button class="js-add-to-cart btn-add">Add to Cart</button>
           </div>
