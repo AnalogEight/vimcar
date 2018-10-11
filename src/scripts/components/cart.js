@@ -31,7 +31,9 @@ var Cart = (function(my) {
    * @return none
    */
   function _isItemAvailable() {
-    fetch("https://example.com/-/v1/stock/reserve", { 'method': 'POST' }) //use the mock API call to check for availibility
+    fetch("https://example.com/-/v1/stock/reserve", {
+        'method': 'POST'
+      }) //use the mock API call to check for availibility
       .then(function(response) {
         const status = response.status;
         let message,
@@ -52,12 +54,7 @@ var Cart = (function(my) {
             break;
         }
 
-        UIkit.notification({
-          message: message,
-          status: type,
-          pos: 'top-center',
-          timeout: 1000
-        });
+        Alert.new('top', false, type, message);
       });
   }
 

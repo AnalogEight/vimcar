@@ -37,11 +37,13 @@
   line-height: 25px;
   position: relative;
   width: 100%;
+  opacity: 0;
+  top: -30px;
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
   padding: 20px 18px;
-  animation: fadeOut 5s linear forwards;
+  transition: opacity 0.5s, top 0.5s;
   i:before {
     position: absolute;
     // @include iconFont();
@@ -186,4 +188,13 @@
 }
 .icon-alert-danger:before {
   // @extend .icon-report-problem-circle::before;
+}
+.alert-show {
+  opacity: 1;
+  top: 0;
+}
+.drop-shadow {
+  -webkit-box-shadow: 2px 4px 25px 4px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 4px 25px 4px rgba(0,0,0,0.1);
+  box-shadow: 2px 4px 25px 4px rgba(0,0,0,0.1);
 }

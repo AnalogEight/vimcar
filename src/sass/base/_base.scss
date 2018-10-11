@@ -12,14 +12,7 @@ body,
 html,
 td,
 tr {
-  @include proximaNovaRegular();
-}
-.h2-title,
-.h3-title,
-h1,
-h2,
-h3 {
-  @include albertLight();
+  font-family: 'Roboto', sans-serif;
 }
 .h2-title,
 .h3-title,
@@ -46,7 +39,6 @@ h3 {
 .h4-title,
 h4 {
   @include fontSize(16px);
-  @include proximaNovaRegular();
   margin-bottom: 25px;
 }
 @include sm-and-below {
@@ -62,7 +54,6 @@ h4 {
 }
 li,
 p {
-  @include proximaNovaLight();
   @include fontSize(15px);
   @include lineHeight(20px);
   color: $color-grey-700;
