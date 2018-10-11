@@ -2,6 +2,7 @@
   .image {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease-in-out;
   }
   .title {
     text-align: center;
@@ -16,7 +17,6 @@
     box-shadow: 10px 10px 112px 0 rgba(199, 204, 222, .5);
     background-color: $color-white;
     position: relative;
-    transition: padding 0.3s ease-in-out;
   }
   .card--hover {
     width: 100%;
@@ -31,9 +31,9 @@
     background: rgba($color-white, 0);
     transition: all 0.3s ease-in-out;
   }
-  &:hover {
-    .card {
-      padding: 5px 25px;
+  .card:hover {
+    .image {
+      transform: scale(1.1, 1.1);
     }
     .card--hover {
       opacity: 1;

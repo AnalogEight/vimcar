@@ -5,7 +5,8 @@
 */
 $z-layers: (
   //Screen debugger (xs, sm, md, lg)
-  "header": 1000
+  "header": 1000,
+  "alert": 4600
 ); /**
   * @desc - Function to get the corresponding z-index of a layer
   * @elements - false

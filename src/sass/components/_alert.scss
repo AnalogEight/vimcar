@@ -1,6 +1,189 @@
-.uk-notification-message-success {
-  background: rgba($color-green, 1);
-  border-radius: 10px;
-  color: $color-white;
-  box-shadow: 10px 10px 112px 0px rgba(199, 204, 222, .5);
+/**
+  * @desc - Styling for alert component
+  * @elements - .alert-container, .alert
+  * @link - false
+*/
+.alert-container {
+  position: fixed;
+  width: 50%;
+  left: 50%;
+  margin-left: -25%;
+  z-index: z("alert");
+}
+@include xs-only() {
+  .alert-container {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    padding: 0 15px;
+  }
+}
+.alert-container-bottom {
+  @extend .alert-container;
+  bottom: 0;
+  .alert {
+    margin-bottom: 10px;
+  }
+}
+.alert-container-top {
+  @extend .alert-container;
+  top: 0;
+  .alert {
+    margin-top: 10px;
+  }
+}
+.alert {
+  @include lineHeight(25px);
+  line-height: 25px;
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 20px 18px;
+  animation: fadeOut 5s linear forwards;
+  i:before {
+    position: absolute;
+    // @include iconFont();
+    @include fontSize(25px);
+    // @include lineHeight(25px); // FIX IE
+    line-height: 25px;
+    top: 20px;
+    left: 18px;
+    margin-right: 10px;
+  }
+  .triangle {
+    height: 10px;
+    width: 10px;
+    top: 16px;
+    left: -6px;
+  }
+  p {
+    font-weight: 100;
+    display: block;
+    span {
+      font-weight: bold;
+    }
+  }
+  &.small {
+    padding: 14px 18px;
+    margin: 10px 0;
+    i::before {
+      //@include lineHeight(20px); // fix IE
+      line-height: 20px;
+      position: absolute;
+      top: 14px;
+    }
+    p {
+      @include lineHeight(20px);
+      margin: 0;
+    }
+  }
+}
+@include sm-and-below {
+  .alert {
+    .triangle {
+      top: -6px;
+      transform: rotate(135deg);
+      left: 22px;
+    }
+  }
+}
+/**
+  * @desc - Styling for alert component modifiers
+  * @elements - .alert--danger, .alert--success, .alert--warning
+  * @link - .alert
+*/
+.alert--danger,
+.alert--success,
+.alert--warning {
+  @extend .alert;
+}
+.alert-content {
+  display: block;
+  margin-left: 40px;
+  margin-right: 18px;
+  p {
+    @include lineHeight(25px);
+  }
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    li {
+      color: $color-blue-dark;
+    }
+  }
+}
+.alert--success {
+  background-color: lighten($color-green-medium, 45%);
+  border-color: lighten($color-green-medium, 35%);
+  i,
+  p {
+    color: $color-green-medium;
+  }
+  .close-alert {
+    color: $color-green-medium;
+    border-bottom: none;
+  }
+}
+.alert--warning {
+  background-color: lighten($color-yellow, 40%);
+  border-color: $color-yellow;
+  i,
+  p {
+    color: $color-brown-dark;
+  }
+}
+.alert--danger {
+  background-color: lighten($color-red, 45%);
+  border-color: $color-red;
+  i,
+  p {
+    color: $color-red;
+  }
+  .close-alert {
+    color: $color-red;
+  }
+}
+/**
+  * @desc - Styling for alert close icon
+  * @elements - .close-alert
+  * @link - .alert
+*/
+.close-alert {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  border-bottom: none;
+  &:before {
+    @include lineHeight(25px);
+    @include fontSize(14px);
+    // @include iconFont();
+    // @extend .icon-close::before;
+  }
+}
+/**
+  * @desc - Styling for the icons of the alerts
+  * @elements - .icon-alert-success, .icon-alert-danger
+  * @link - .alert
+*/
+.icon-alert-danger:before,
+.icon-alert-info:before,
+.icon-alert-success:before,
+.icon-alert-warning:before,
+.icon-information-circle:before {
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  @include fontSize(14px);
+  // @include iconFont();
+}
+.icon-alert-success:before {
+  // @extend .icon-check-circle-2::before;
+}
+.icon-alert-warning:before {
+  // @extend .icon-report-problem-circle::before;
+}
+.icon-alert-danger:before {
+  // @extend .icon-report-problem-circle::before;
 }
