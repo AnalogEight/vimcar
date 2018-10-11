@@ -1,14 +1,13 @@
 /**
  * @desc This component contains all functionality for the Cart
- * public function addItemToCart
  * @author Kaj Dillen
- * @required none
+ * @required Alert.js
  */
 var Cart = (function(my) {
   let totalItems = 0; //total amount of items in Cart
 
   my.init = function() {
-    _linkButtons();
+    _linkButtons(); //link the functionality to the "js-add-to-cart" buttons
   };
 
   /**
@@ -20,13 +19,13 @@ var Cart = (function(my) {
     const addToCartButtons = document.getElementsByClassName('js-add-to-cart');
     Array.prototype.forEach.call(addToCartButtons, function(counter, i) {
       addToCartButtons[i].addEventListener('click', function() {
-        _isItemAvailable();
+        _isItemAvailable(); //check if selected item is available
       }, false);
     });
   }
 
   /**
-   * @desc function see if item is available and display correct alert
+   * @desc function see if item is available and display the correct alert
    * @param none
    * @return none
    */
@@ -42,7 +41,7 @@ var Cart = (function(my) {
           case 204:
             message = "Item added to cart";
             type = "success";
-            _addItemToCart();
+            _addItemToCart(); //increase counter and add to cart
             break;
           case 418:
             message = "Item out of stock";
@@ -54,7 +53,7 @@ var Cart = (function(my) {
             break;
         }
 
-        Alert.new('top', false, type, message);
+        Alert.new('top', false, type, message); //create a new alert, non-sticky with the right status and message
       });
   }
 

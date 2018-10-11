@@ -46,7 +46,6 @@
   transition: opacity 0.5s, top 0.5s;
   i:before {
     position: absolute;
-    // @include iconFont();
     @include fontSize(25px);
     // @include lineHeight(25px); // FIX IE
     line-height: 25px;
@@ -160,8 +159,8 @@
   &:before {
     @include lineHeight(25px);
     @include fontSize(14px);
-    // @include iconFont();
-    // @extend .icon-close::before;
+    @extend .icon-cross::before;
+    font-family: 'icomoon' !important;
   }
 }
 /**
@@ -178,16 +177,15 @@
   left: 18px;
   top: 20px;
   @include fontSize(14px);
-  // @include iconFont();
 }
 .icon-alert-success:before {
-  // @extend .icon-check-circle-2::before;
+  @extend .icon-circle-down::before;
 }
 .icon-alert-warning:before {
-  // @extend .icon-report-problem-circle::before;
+  @extend .icon-warning::before;
 }
 .icon-alert-danger:before {
-  // @extend .icon-report-problem-circle::before;
+  @extend .icon-notification::before;
 }
 .alert-show {
   opacity: 1;

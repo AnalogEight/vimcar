@@ -5,8 +5,8 @@ X create 'add to basket' component which updates number
 X expand basket component to check for availibility
 
 EXTRA:
-- add Alert component (css and js)
-- animate product hover
+X add Alert component (css and js)
+X animate product hover
 X generate list of products from JSON file (REST-API wise) instead of hard-coded (backend render)
 
 JS COMPONENTS:
@@ -16,9 +16,8 @@ basket
  X add to basket functionality
 
 product
- - generate list of products from JSON file
+ X generate list of products from JSON file
 
 CSS COMPONENTS
  X header
  X product 
- - animations (extra: Add basket number animations)
