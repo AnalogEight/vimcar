@@ -23,7 +23,7 @@ $RECYCLE.BIN/
 node_modules
 
 # Project temp files/folders
-dist
+# dist -> Added dist to repo to show final product
 
 # Caching files
 \.smbdelete*

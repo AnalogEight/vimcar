@@ -1,3 +1,4 @@
+//JSON file with products. Mock version for testing
 const products = {
   "watches": [{
       "Name": "42mm Space Gray Aluminum Case with Black Woven Nylon",
